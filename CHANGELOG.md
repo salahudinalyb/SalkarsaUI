@@ -2,6 +2,10 @@
 
 Notable changes to SalkarsaUI are listed here. The format follows [Keep a Changelog](https://keepachangelog.com) and versions follow [SemVer](https://semver.org).
 
+## [Unreleased]
+### Changed
+- Reworded the docs and the token, component and text style descriptions to read more plainly. Token values are unchanged.
+
 ## [1.0.0] - 2026-11-13
 ### Added
 - 33 components: Button, Icon button, Chip, Input, Input addon, Textarea, Select, Checkbox, Radio, Switch, Segmented control, Segment, Alert, Toast, Tooltip, Badge, Spinner, App bar, Bottom navigation, Nav item, Tabs, Tab, Menu, Menu item, Card, Dialog, Bottom sheet, Action sheet, Action sheet item, List item, Avatar, Status bar, Home indicator.

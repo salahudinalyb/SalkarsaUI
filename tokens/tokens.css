@@ -1,4 +1,4 @@
-/* SalkarsaUI tokens — generated from Figma variables. Do not edit by hand; regenerate from Figma. */
+/* SalkarsaUI tokens, generated from Figma variables. Do not edit by hand; regenerate from Figma. */
 /* Usage: import once at app root. Theme: <html data-theme="light|dark">; without the attribute it follows the OS. */
 
 /* ========== Primitives (do NOT use directly in UI) ========== */
@@ -391,7 +391,7 @@
   --code-letter-spacing: var(--letter-spacing-normal);
 }
 
-/* ========== Semantic: color — Light (default) ========== */
+/* ========== Semantic color: light (default) ========== */
 :root,
 [data-theme="light"] {
   color-scheme: light;
@@ -486,7 +486,7 @@
   --chart-categorical-8: var(--color-sky-500);
 }
 
-/* ========== Semantic: color — Dark ========== */
+/* ========== Semantic color: dark ========== */
 [data-theme="dark"] {
   color-scheme: dark;
   --bg-default: var(--color-gray-950);
