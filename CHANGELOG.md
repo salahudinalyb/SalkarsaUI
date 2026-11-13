@@ -2,9 +2,23 @@
 
 Notable changes to SalkarsaUI are listed here. The format follows [Keep a Changelog](https://keepachangelog.com) and versions follow [SemVer](https://semver.org).
 
-## [Unreleased]
+## [1.1.0] - 2026-11-13
+SalkarsaUI now targets responsive web (mobile web, tablet and desktop) and ships a theme for shadcn/ui and Tailwind CSS v4.
+
+### Added
+- 18 components, for 51 in total: Date picker, Calendar, Calendar day, Skeleton, Progress, Navbar, Navbar link, Sidebar, Sidebar item, Breadcrumb, Breadcrumb item, Pagination, Pagination item, Popover, Table, Table row, Table cell and Table header cell.
+- Dialog sizes (Mobile, sm, md, lg) and List item states (Default, Hover, Pressed).
+- Hover and Focus states on Button, Icon button, Chip, Menu item, Tab, Input, Select, Textarea and all new navigation components.
+- Breakpoints sm 640, md 768, lg 1024, xl 1280 and 2xl 1536, with 4, 8 and 12 column grids.
+- Layout tokens: container 1280, navbar 64, sidebar 256, form 560, prose 680, and dialog widths 480, 640 and 800. There are now 573 variables in total.
+- Effect style `focus/ring-offset` (12 effect styles in total) and 4 grid styles.
+- `tokens/shadcn.css`, which points shadcn/ui variables at SalkarsaUI tokens. Dark mode now works with `data-theme="dark"` or `.dark`.
+- `tokens/tokens.json` now also includes the effect styles (shadows, focus rings and background blurs).
+
 ### Changed
-- Reworded the docs and the token, component and text style descriptions to read more plainly. Token values are unchanged.
+- `title/sm` is now 14/20, so it no longer matches `title/md`. All other token values from 1.0.0 are unchanged.
+- DESIGN.md, AGENTS.md, CLAUDE.md, the Cursor and Copilot rules and llms.txt were rewritten for web and shadcn/ui.
+- Docs and token, component and text style descriptions were reworded to read more plainly.
 
 ## [1.0.0] - 2026-11-13
 ### Added

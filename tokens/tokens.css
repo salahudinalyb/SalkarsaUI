@@ -1,7 +1,8 @@
-/* SalkarsaUI tokens, generated from Figma variables. Do not edit by hand; regenerate from Figma. */
-/* Usage: import once at app root. Theme: <html data-theme="light|dark">; without the attribute it follows the OS. */
+/* SalkarsaUI tokens, generated from Figma variables (2026-11-13). Do not edit by hand; regenerate from Figma. */
+/* Usage: import once at app root. Theme: <html data-theme="light|dark"> or class="light|dark"; with neither, it follows the OS. */
+/* Breakpoints (use in media queries or Tailwind screens, since CSS vars can't be used in @media): sm 640px · md 768px · lg 1024px · xl 1280px · 2xl 1536px */
 
-/* ========== Primitives (do NOT use directly in UI) ========== */
+/* ========== Primitives (don't use directly in UI) ========== */
 :root {
   --color-gray-50: #f9fafb;
   --color-gray-100: #f3f4f6;
@@ -225,7 +226,7 @@
   --space-44: 44px;
 }
 
-/* ========== Semantic: spacing, size, layout ========== */
+/* ========== Semantic: spacing, size, layout, breakpoints ========== */
 :root {
   --spacing-none: var(--space-0);
   --spacing-4xs: var(--space-1);
@@ -274,6 +275,27 @@
   --layout-grid-margin: 16px;
   --layout-content-width: 361px;
   --layout-sheet-max-height: 760px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --layout-screen-width-tablet: 768px;
+  --layout-screen-width-desktop: 1440px;
+  --layout-grid-tablet-columns: 8;
+  --layout-grid-tablet-gutter: var(--space-16);
+  --layout-grid-tablet-margin: var(--space-24);
+  --layout-grid-desktop-columns: 12;
+  --layout-grid-desktop-gutter: var(--space-24);
+  --layout-grid-desktop-margin: var(--space-32);
+  --layout-container-max-width: 1280px;
+  --layout-navbar-height: var(--space-64);
+  --layout-sidebar-width: 256px;
+  --layout-form-max-width: 560px;
+  --layout-prose-max-width: 680px;
+  --layout-dialog-width-sm: 480px;
+  --layout-dialog-width-md: 640px;
+  --layout-dialog-width-lg: 800px;
 }
 
 /* ========== Semantic: shape ========== */
@@ -345,8 +367,8 @@
   --title-md-line-height: var(--line-height-24);
   --title-md-font-weight: var(--font-weight-semibold);
   --title-md-letter-spacing: var(--letter-spacing-normal);
-  --title-sm-font-size: var(--font-size-16);
-  --title-sm-line-height: var(--line-height-24);
+  --title-sm-font-size: var(--font-size-14);
+  --title-sm-line-height: var(--line-height-20);
   --title-sm-font-weight: var(--font-weight-semibold);
   --title-sm-letter-spacing: var(--letter-spacing-normal);
   --body-lg-font-size: var(--font-size-18);
@@ -393,7 +415,8 @@
 
 /* ========== Semantic color: light (default) ========== */
 :root,
-[data-theme="light"] {
+[data-theme="light"],
+.light {
   color-scheme: light;
   --bg-default: var(--color-base-white);
   --bg-subtle: var(--color-gray-50);
@@ -487,7 +510,8 @@
 }
 
 /* ========== Semantic color: dark ========== */
-[data-theme="dark"] {
+[data-theme="dark"],
+.dark {
   color-scheme: dark;
   --bg-default: var(--color-gray-950);
   --bg-subtle: var(--color-gray-900);
@@ -580,7 +604,7 @@
   --chart-categorical-8: var(--color-sky-400);
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
+  :root:not([data-theme="light"]):not(.light) {
     color-scheme: dark;
     --bg-default: var(--color-gray-950);
     --bg-subtle: var(--color-gray-900);
@@ -674,16 +698,17 @@
   }
 }
 
-/* ========== Elevation ========== */
+/* ========== Elevation & focus ========== */
 :root {
-  --shadow-xs: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
-  --shadow-sm: 0px 1px 3px 0px rgba(0, 0, 0, 0.1), 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0px 4px 6px 0px rgba(0, 0, 0, 0.1), 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0px 10px 15px 0px rgba(0, 0, 0, 0.1), 0px 4px 6px 0px rgba(0, 0, 0, 0.1);
-  --shadow-xl: 0px 20px 25px 0px rgba(0, 0, 0, 0.1), 0px 8px 10px 0px rgba(0, 0, 0, 0.1);
-  --shadow-2xl: 0px 25px 50px 0px rgba(0, 0, 0, 0.2);
-  --shadow-inner: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
-  --focus-ring: 0px 0px 0px 3px #93c5fd;
+  --shadow-xs: 0px 1px 2px 0px var(--effect-shadow);
+  --shadow-sm: 0px 1px 2px 0px var(--effect-shadow), 0px 1px 3px 0px var(--effect-shadow);
+  --shadow-md: 0px 2px 4px 0px var(--effect-shadow), 0px 4px 6px 0px var(--effect-shadow);
+  --shadow-lg: 0px 4px 6px 0px var(--effect-shadow), 0px 10px 15px 0px var(--effect-shadow);
+  --shadow-xl: 0px 8px 10px 0px var(--effect-shadow), 0px 20px 25px 0px var(--effect-shadow);
+  --shadow-2xl: 0px 25px 50px 0px var(--effect-shadow-strong);
+  --shadow-inner: inset 0px 2px 4px 0px var(--effect-shadow);
+  --focus-ring: 0px 0px 0px 3px var(--effect-focus-ring);
+  --focus-ring-offset: 0px 0px 0px 2px var(--bg-default), 0px 0px 0px 4px var(--border-focus);
   --blur-background-sm: blur(8px);
   --blur-background-md: blur(16px);
   --blur-background-lg: blur(32px);

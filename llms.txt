@@ -1,11 +1,12 @@
 # SalkarsaUI
 
-> Mobile-first design system with 33 components, 959 icons and 552 design tokens for light and dark themes, plus usage rules for developers and AI coding tools.
+> Mobile-first web design system with a shadcn/ui and Tailwind v4 theme, 51 components, 959 icons and 573 design tokens (light/dark, breakpoints), plus usage rules for developers and AI coding tools.
 
 ## Docs
-- [DESIGN.md](https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/DESIGN.md): The full guide, covering rules, tokens, components and their props, patterns and accessibility
+- [DESIGN.md](https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/DESIGN.md): The full guide, covering rules, tokens, breakpoints, states, the component to shadcn mapping, patterns and accessibility
 - [AGENTS.md](https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/AGENTS.md): A short list of do's and don'ts for coding agents
 
 ## Tokens
-- [tokens.css](https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/tokens/tokens.css): CSS custom properties with light/dark themes, shadows and text classes
+- [tokens.css](https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/tokens/tokens.css): CSS variables with light/dark themes, shadows, focus rings and text classes
+- [shadcn.css](https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/tokens/shadcn.css): Bridge between shadcn/ui, Tailwind v4 and SalkarsaUI tokens
 - [tokens.json](https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/tokens/tokens.json): W3C DTCG tokens with descriptions
