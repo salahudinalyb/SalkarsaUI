@@ -84,4 +84,4 @@ Tokens are generated from Figma variables. Change them in Figma first, re-export
 
 ## License
 
-_TBD_
+[MIT](LICENSE)
