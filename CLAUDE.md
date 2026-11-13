@@ -4,6 +4,7 @@
 @DESIGN.md
 
 ## Notes for Claude
-- For UI work, follow the rules in DESIGN.md section 0 and the component specs in section 4.
-- Use the variables in `tokens/tokens.css`. When choosing between tokens, read their `$description` in `tokens/tokens.json`.
-- If the Figma MCP is connected, use the code syntax that Figma Dev Mode shows for each variable.
+- The target is a responsive, mobile-first web app built with Next.js, Tailwind v4 and shadcn/ui.
+- For UI work, follow DESIGN.md section 0 (core rules), section 2 (tokens and breakpoints) and section 4 (component to shadcn mapping).
+- Add shadcn components with `npx shadcn@latest add <name>`, then adjust their variants and sizes to match SalkarsaUI. Don't copy component code by hand.
+- If the Figma MCP is connected, use the CSS name that Dev Mode shows for each variable.
