@@ -1,9 +1,9 @@
-# Copilot instructions — SalkarsaUI
+# Copilot instructions
 
-This repo follows the SalkarsaUI design system. Before generating UI, read `DESIGN.md` and `AGENTS.md`.
+This repo uses the SalkarsaUI design system. Read `DESIGN.md` and `AGENTS.md` before generating UI.
 
-- Use semantic CSS variables from `tokens/tokens.css` for all colors, spacing, radius, borders, shadows and typography. Never hard-code hex or px values, never use primitive tokens (`--color-*`, `--space-*`).
-- Reuse components and prop names from DESIGN.md §4.
-- Minimum touch target 44px, visible focus state, aria-label on icon-only buttons.
-- Theme with `data-theme="light|dark"`; never branch colors on dark mode in code.
-- UI copy in Bahasa Indonesia, sentence case.
+- Use the semantic CSS variables in `tokens/tokens.css` for colors, spacing, radius, borders, shadows and typography. Don't hard-code hex or px values, and don't use primitive tokens (`--color-*`, `--space-*`).
+- Reuse the components and prop names listed in DESIGN.md section 4.
+- Keep touch targets at least 44px, show a visible focus state, and add `aria-label` to icon-only buttons.
+- Set the theme with `data-theme="light|dark"`. Don't switch colors on dark mode in code.
+- Write UI copy in Bahasa Indonesia, sentence case.

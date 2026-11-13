@@ -1,11 +1,11 @@
 # SalkarsaUI
 
-> Mobile-first design system: 33 components, 959 icons, 552 design tokens (light/dark). Rules for engineers and AI coding agents.
+> Mobile-first design system with 33 components, 959 icons and 552 design tokens for light and dark themes, plus usage rules for developers and AI coding tools.
 
 ## Docs
-- [DESIGN.md](https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/DESIGN.md): Full spec — hard rules, tokens, components with props, patterns, accessibility
-- [AGENTS.md](https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/AGENTS.md): Short do/don't list for coding agents
+- [DESIGN.md](https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/DESIGN.md): The full guide, covering rules, tokens, components and their props, patterns and accessibility
+- [AGENTS.md](https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/AGENTS.md): A short list of do's and don'ts for coding agents
 
 ## Tokens
-- [tokens.css](https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/tokens/tokens.css): CSS custom properties, light/dark, shadows, text classes
+- [tokens.css](https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/tokens/tokens.css): CSS custom properties with light/dark themes, shadows and text classes
 - [tokens.json](https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/tokens/tokens.json): W3C DTCG tokens with descriptions

@@ -6,7 +6,7 @@ alwaysApply: true
 
 Follow @DESIGN.md and @AGENTS.md for every UI change.
 
-- Only semantic tokens from tokens/tokens.css (var(--bg-default), var(--spacing-md), var(--radius-md), .text-body-md). No hex/px literals, no primitives.
-- Reuse SalkarsaUI components and their props (DESIGN.md §4).
-- Touch target ≥ 44px, visible focus, aria-label on icon-only buttons.
-- Light/dark via data-theme; same token names.
+- Use only semantic tokens from tokens/tokens.css, for example var(--bg-default), var(--spacing-md), var(--radius-md) and .text-body-md. No hex or px values, no primitive tokens.
+- Reuse SalkarsaUI components and their props (DESIGN.md section 4).
+- Touch targets at least 44px, a visible focus state, and aria-label on icon-only buttons.
+- Light and dark themes are set with data-theme and share the same token names.

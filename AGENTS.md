@@ -1,26 +1,26 @@
-# AGENTS.md — SalkarsaUI
+# AGENTS.md
 
-This project uses the **SalkarsaUI** design system. Full spec: `DESIGN.md` (read it before writing or changing any UI). Tokens: `tokens/tokens.css`, `tokens/tokens.json`.
+This project uses the SalkarsaUI design system. Read `DESIGN.md` before you write or change any UI. Tokens live in `tokens/tokens.css` and `tokens/tokens.json`.
 
-## Must
-- Use **semantic tokens** for every color, spacing, radius, border, shadow and font value: `var(--bg-default)`, `var(--spacing-md)`, `var(--radius-md)`, `.text-body-md`.
-- Pair foreground/background tokens: `bg-brand-default` → `text-on-brand`; `bg-warning-default` → `text-on-warning`; `bg-inverse` → `text-inverse`; `bg-<status>-subtle` → `text-<status>`.
-- Reuse the components listed in DESIGN.md §4 and their prop names/variants. Compose via slots instead of creating look-alikes.
-- Interactive targets ≥ 44px; visible focus (`--border-focus`, `--effect-focus-ring`); `aria-label` on icon-only buttons.
-- Theme via `data-theme="light|dark"` on `<html>`. Light and dark share the same token names.
-- UI copy in Bahasa Indonesia, sentence case ("Simpan", "Batal", "Memproses…").
+## Do
+- Use semantic tokens for every color, spacing, radius, border, shadow and font value, such as `var(--bg-default)`, `var(--spacing-md)`, `var(--radius-md)` and `.text-body-md`.
+- Pair foreground and background tokens: `bg-brand-default` with `text-on-brand`, `bg-warning-default` with `text-on-warning`, `bg-inverse` with `text-inverse`, and `bg-<status>-subtle` with `text-<status>`.
+- Reuse the components in DESIGN.md section 4 and keep their prop names and variants. Build new layouts by composing them through slots, not by making look-alike components.
+- Keep interactive targets at least 44px. Show a visible focus state (`--border-focus` and `--effect-focus-ring`) and give icon-only buttons an `aria-label`.
+- Set the theme with `data-theme="light|dark"` on `<html>`. Both themes use the same token names.
+- Write UI copy in Bahasa Indonesia, sentence case ("Simpan", "Batal", "Memproses…").
 
-## Never
-- Hex/rgb/px literals in UI code (except `0`), or primitive tokens like `--color-blue-500` / `--space-16`.
-- `if (dark)` color branching.
-- Editing `tokens/*` by hand — tokens are generated from Figma.
-- Building Status bar / Home indicator in code (Figma mockup only).
+## Don't
+- Write hex, rgb or px values in UI code (`0` is fine), or use primitive tokens like `--color-blue-500` or `--space-16`.
+- Branch colors on dark mode in code (`if (dark) …`).
+- Edit files in `tokens/` by hand. They are generated from Figma.
+- Build the status bar or home indicator in code. Those exist in Figma for mockups only.
 
-## When unsure
-- Pick the most semantic token; read its `$description` in `tokens/tokens.json`.
-- If a component is missing, compose from existing ones and say "candidate component: <name>" in your response.
+## If you're unsure
+- Choose the most semantic token and check its `$description` in `tokens/tokens.json`.
+- If a component doesn't exist yet, compose it from existing ones and mention "candidate component: <name>" in your reply.
 
-## Checks before finishing
-- [ ] No raw colors/sizes (`grep -nE "#[0-9a-fA-F]{3,8}|[0-9]+px" src` returns only token files)
-- [ ] Works in light and dark
-- [ ] Touch targets, focus states, labels present
+## Before you finish
+- [ ] No raw colors or sizes (`grep -nE "#[0-9a-fA-F]{3,8}|[0-9]+px" src` should only match token files)
+- [ ] Works in both light and dark
+- [ ] Touch targets, focus states and labels are in place
