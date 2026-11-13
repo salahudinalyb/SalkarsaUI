@@ -1,0 +1,12 @@
+---
+description: SalkarsaUI design system rules for all UI code
+globs: ["**/*.{tsx,jsx,ts,js,vue,svelte,css,scss,html,swift,kt}"]
+alwaysApply: true
+---
+
+Follow @DESIGN.md and @AGENTS.md for every UI change.
+
+- Only semantic tokens from tokens/tokens.css (var(--bg-default), var(--spacing-md), var(--radius-md), .text-body-md). No hex/px literals, no primitives.
+- Reuse SalkarsaUI components and their props (DESIGN.md §4).
+- Touch target ≥ 44px, visible focus, aria-label on icon-only buttons.
+- Light/dark via data-theme; same token names.
