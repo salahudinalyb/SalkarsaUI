@@ -1,39 +1,40 @@
 # SalkarsaUI
 
-Mobile-first design system — Figma library + design tokens + AI-ready guidelines.
-Built so engineers **and** AI coding agents (Claude Code, Codex, Cursor, Copilot, v0…) produce on-brand UI without guessing.
+SalkarsaUI is a mobile-first design system. It includes a Figma library, design tokens for light and dark themes, and written guidelines you can hand to your team or to an AI coding assistant.
 
-- 33 components · 959 icons (Regular / Filled)
-- 552 tokens (primitive → semantic), light & dark theme
-- Every token and component documented with *when to use it*
-- Code names for Web (CSS vars), Android and iOS
+What's included:
 
-## What's in this repo
+- 33 components and 959 icons (Regular and Filled)
+- 552 tokens, from raw primitives up to semantic names, in light and dark
+- A short note on every token and component explaining when to use it
+- Code names for Web (CSS variables), Android and iOS
 
-| Path | What it is |
+## Repo contents
+
+| Path | Contents |
 |---|---|
-| `DESIGN.md` | **The source of truth.** Rules, tokens, components, patterns. Read this first. |
-| `tokens/tokens.css` | CSS custom properties incl. light/dark theme, shadows, `.text-*` classes |
-| `tokens/tokens.json` | Same tokens in W3C DTCG format (Style Dictionary, Tailwind, native builds) |
-| `AGENTS.md` | Instructions for AI coding agents (Codex, Cursor, Copilot, Gemini, …) |
-| `CLAUDE.md` | Entry point for Claude Code |
-| `.cursor/rules/salkarsaui.mdc` | Cursor rule |
-| `.github/copilot-instructions.md` | GitHub Copilot instructions |
-| `llms.txt` | Index for LLMs / AI tools fetching this repo |
+| `DESIGN.md` | The full guide: rules, tokens, components and patterns. Start here. |
+| `tokens/tokens.css` | CSS custom properties with light/dark themes, shadows and `.text-*` classes |
+| `tokens/tokens.json` | The same tokens in W3C DTCG format, for Style Dictionary, Tailwind or native builds |
+| `AGENTS.md` | Short rules for coding agents (Codex, Cursor, Copilot, Gemini and others) |
+| `CLAUDE.md` | Entry file for Claude Code |
+| `.cursor/rules/salkarsaui.mdc` | Rule file for Cursor |
+| `.github/copilot-instructions.md` | Instructions for GitHub Copilot |
+| `llms.txt` | Index of this repo for LLM tools |
 
-## Quick start (web)
+## Getting started (web)
 
-1. Copy `tokens/tokens.css` into your project (or download it):
+1. Add `tokens/tokens.css` to your project:
    ```bash
    curl -o src/styles/tokens.css https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/tokens/tokens.css
    ```
-2. Import once at the app root:
+2. Import it once at the root of your app:
    ```css
    @import "./tokens.css";
    body { background: var(--bg-default); color: var(--text-primary); }
    ```
-3. Switch theme: `<html data-theme="dark">` (no attribute = follow OS).
-4. Use tokens, never raw values:
+3. Set the theme with `<html data-theme="dark">`. Leave the attribute off to follow the OS setting.
+4. Use tokens instead of raw values:
    ```css
    .card {
      background: var(--surface-default);
@@ -50,7 +51,7 @@ Built so engineers **and** AI coding agents (Claude Code, Codex, Cursor, Copilot
 
 ### Tailwind (optional)
 ```js
-// tailwind.config.js — map utilities to tokens
+// tailwind.config.js: point Tailwind utilities at the tokens
 theme: { extend: {
   colors: { bg: { DEFAULT: 'var(--bg-default)', subtle: 'var(--bg-subtle)' }, text: { primary: 'var(--text-primary)' } },
   spacing: { xs: 'var(--spacing-xs)', sm: 'var(--spacing-sm)', md: 'var(--spacing-md)', lg: 'var(--spacing-lg)', xl: 'var(--spacing-xl)' },
@@ -58,29 +59,31 @@ theme: { extend: {
 }}
 ```
 
-## Using SalkarsaUI with AI coding tools
+## Using it with AI coding tools
 
-Copy `DESIGN.md` and `AGENTS.md` into the root of **your app's repo**, then:
+Copy `DESIGN.md` and `AGENTS.md` into the root of your app's repo, then set up your tool:
 
-| Tool | Do this |
+| Tool | Setup |
 |---|---|
-| Claude Code | Add `@DESIGN.md` to your `CLAUDE.md` (or copy ours) |
-| Codex / Gemini CLI / Jules | Reads `AGENTS.md` automatically |
+| Claude Code | Add `@DESIGN.md` to your `CLAUDE.md`, or copy ours |
+| Codex, Gemini CLI, Jules | They read `AGENTS.md` on their own |
 | Cursor | Copy `.cursor/rules/salkarsaui.mdc` |
 | GitHub Copilot | Copy `.github/copilot-instructions.md` |
-| v0 / Bolt / Lovable | Paste `DESIGN.md` into project knowledge / custom instructions |
+| v0, Bolt, Lovable | Paste `DESIGN.md` into the project knowledge or custom instructions |
 
-Or just tell your agent: *"Fetch https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/DESIGN.md and follow it for all UI."*
+You can also point your agent straight at the file: *"Read https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/DESIGN.md and follow it for all UI work."*
 
 ## Figma
 
-Figma library: _add your Community / library link here_.
-Pages: `0. SalkarsaUI Docs` (usage docs) · `1. Foundations` · `2. Components` · `Icons` · `Illustrations`.
-In Dev Mode, every variable shows its code name (`var(--bg-default)`, `DSColor.BgDefault`, `DSColor.bgDefault`).
+Figma library link: coming soon.
+
+Pages: `0. SalkarsaUI Docs` (usage docs), `1. Foundations`, `2. Components`, `Icons`, `Illustrations`.
+
+In Dev Mode, each variable shows its code name, for example `var(--bg-default)`, `DSColor.BgDefault` or `DSColor.bgDefault`.
 
 ## Updating tokens
 
-Tokens are generated from Figma variables. Change them in Figma first, re-export, then update `tokens/` and `CHANGELOG.md`. Never edit token values only in code.
+The files in `tokens/` are generated from the Figma variables. To change a token, edit it in Figma, export again, then update `tokens/` and `CHANGELOG.md`. Don't change token values in code only.
 
 ## License
 
