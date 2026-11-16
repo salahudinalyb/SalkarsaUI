@@ -18,6 +18,7 @@ What you get:
 | Path | Contents |
 |---|---|
 | `DESIGN.md` | The full guide: rules, tokens, breakpoints, states, the component to shadcn mapping, and patterns. Start here. |
+| `SKILL.md` | Makes this repo an Agent Skill, so you can install it once and use it in every project |
 | `tokens/tokens.css` | All tokens as CSS variables, with light/dark themes, shadows, focus rings and `.text-*` classes |
 | `tokens/shadcn.css` | Points the shadcn/ui variables at SalkarsaUI tokens (Tailwind v4) |
 | `tokens/tokens.json` | The same tokens in W3C DTCG format, with descriptions |
@@ -69,7 +70,31 @@ For dark mode, set `<html data-theme="dark">` or `class="dark"` (this works with
 
 ## Using it with AI coding tools
 
-Copy `DESIGN.md` and `AGENTS.md` into the root of your app's repo, then set up your tool:
+### Install as a skill (recommended)
+
+The whole repo is an [Agent Skill](https://agentskills.io). Install it once and your agent picks it up on its own whenever it works on UI, in any project. If a project doesn't have the tokens yet, the agent copies them in for you.
+
+```bash
+# Claude Code
+git clone https://github.com/salahudinalyb/SalkarsaUI ~/.claude/skills/salkarsaui
+
+# Codex and other tools that read ~/.agents/skills
+git clone https://github.com/salahudinalyb/SalkarsaUI ~/.agents/skills/salkarsaui
+```
+
+Not comfortable with the terminal? Paste this into your agent and it will do the install for you:
+
+> Install the SalkarsaUI skill from https://github.com/salahudinalyb/SalkarsaUI
+
+To get the latest version later:
+
+```bash
+git -C ~/.claude/skills/salkarsaui pull
+```
+
+### Add it to a single project
+
+For tools that don't support skills yet, copy `DESIGN.md` and `AGENTS.md` into the root of your app's repo, then set up your tool:
 
 | Tool | Setup |
 |---|---|
@@ -99,6 +124,8 @@ In Dev Mode, each variable shows its CSS name, for example `var(--bg-default)`. 
 
 ## Updating tokens
 The files in `tokens/` are generated from the Figma variables. To change a token, edit it in Figma first, regenerate `tokens/`, then update `CHANGELOG.md`. Don't change token values in code only.
+
+Exact values and component specs are written only in `DESIGN.md`. `SKILL.md`, `AGENTS.md` and the Cursor and Copilot rules point to it, so a change in Figma means updating `DESIGN.md` (and `tokens/` if a token changed), and nothing else.
 
 ## License
 

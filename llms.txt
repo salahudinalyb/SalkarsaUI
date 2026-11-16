@@ -4,6 +4,7 @@
 
 ## Docs
 - [DESIGN.md](https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/DESIGN.md): The full guide, covering rules, tokens, breakpoints, states, the component to shadcn mapping, patterns and accessibility
+- [SKILL.md](https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/SKILL.md): Agent Skill entry point, with the setup steps and the workflow for building UI
 - [AGENTS.md](https://raw.githubusercontent.com/salahudinalyb/SalkarsaUI/main/AGENTS.md): A short list of do's and don'ts for coding agents
 
 ## Tokens

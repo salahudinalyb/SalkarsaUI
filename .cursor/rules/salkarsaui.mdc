@@ -4,10 +4,10 @@ globs: ["**/*.{tsx,jsx,ts,js,vue,svelte,astro,css,scss,html,mdx}"]
 alwaysApply: true
 ---
 
-Follow @DESIGN.md and @AGENTS.md for every UI change.
+Follow @DESIGN.md and @AGENTS.md for every UI change. Exact sizes, radius, spacing steps and breakpoints are in DESIGN.md.
 
-- Colors: shadcn aliases (bg-primary, text-muted-foreground, border-border) or tokens (bg-(--bg-subtle)). No hex values, no palette classes like bg-blue-500, no primitive tokens.
-- Spacing: Tailwind 4px steps only (1 2 3 4 5 6 8 10 12 16 20 24 32). Type: the .text-* classes.
-- Components: use the shadcn component mapped in DESIGN.md section 4, restyled to SalkarsaUI sizes (buttons 40, 48 or 56 tall, rounded-lg).
-- Build mobile first (base, then md:, then lg:). Include hover, active, focus-visible and disabled states. Touch targets at least 44px.
+- Colors: shadcn aliases (bg-primary, text-muted-foreground, border-border) or semantic tokens (bg-(--bg-subtle)). No hex values, no palette classes like bg-blue-500, no primitive tokens.
+- Spacing: the steps in DESIGN.md section 2.2. Type: the .text-* classes.
+- Components: the shadcn component mapped in DESIGN.md section 4, with the variants and sizes listed there.
+- Build mobile first (base, then md:, then lg:). Include every state in DESIGN.md section 3.1.
 - Dark mode uses data-theme="dark" or .dark, with the same token names.

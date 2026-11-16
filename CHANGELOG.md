@@ -2,6 +2,13 @@
 
 Notable changes to SalkarsaUI are listed here. The format follows [Keep a Changelog](https://keepachangelog.com) and versions follow [SemVer](https://semver.org).
 
+## [1.2.0] - 2026-11-16
+### Added
+- `SKILL.md`, which turns the repo into an Agent Skill. Install it once with `git clone` into `~/.claude/skills/salkarsaui` (or `~/.agents/skills/salkarsaui`) and update it with `git pull`.
+
+### Changed
+- AGENTS.md and the Cursor and Copilot rules no longer repeat exact sizes and spacing steps. They point to DESIGN.md, which is now the only place those values are written.
+
 ## [1.1.0] - 2026-11-13
 SalkarsaUI now targets responsive web (mobile web, tablet and desktop) and ships a theme for shadcn/ui and Tailwind CSS v4.
 
