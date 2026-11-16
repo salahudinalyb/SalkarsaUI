@@ -221,8 +221,8 @@
   --letter-spacing-wide: 0.25px;
   --letter-spacing-wider: 0.5px;
   --letter-spacing-widest: 1px;
-  --font-family-sans: "Inter", system-ui, -apple-system, sans-serif;
-  --font-family-mono: "Roboto Mono", ui-monospace, monospace;
+  --font-family-inter: "Inter", system-ui, -apple-system, sans-serif;
+  --font-family-roboto-mono: "Roboto Mono", ui-monospace, monospace;
   --space-44: 44px;
 }
 
@@ -325,8 +325,8 @@
 
 /* ========== Semantic: typography ========== */
 :root {
-  --font-family-sans: var(--font-family-sans);
-  --font-family-mono: var(--font-family-mono);
+  --font-family-sans: var(--font-family-inter);
+  --font-family-mono: var(--font-family-roboto-mono);
   --display-lg-font-size: var(--font-size-48);
   --display-lg-line-height: var(--line-height-56);
   --display-lg-font-weight: var(--font-weight-bold);

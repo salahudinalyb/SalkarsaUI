@@ -44,7 +44,7 @@ curl -o app/shadcn.css https://raw.githubusercontent.com/salahudinalyb/SalkarsaU
 @import "./shadcn.css";
 ```
 
-That's it. Every shadcn component now picks up SalkarsaUI colors, radius and fonts:
+Then update `cn()` in `lib/utils.ts` as shown in DESIGN.md section 1, so it keeps the `.text-*` type classes. Every shadcn component now picks up SalkarsaUI colors, radius and fonts:
 
 ```tsx
 <Button>Simpan</Button>

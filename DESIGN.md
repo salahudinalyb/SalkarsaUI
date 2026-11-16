@@ -40,6 +40,33 @@ Delete the color variables that shadcn generated in globals.css, since `shadcn.c
 <p className="text-muted-foreground">Helper</p>
 ```
 
+shadcn's `cn()` uses `tailwind-merge`, which reads the `.text-*` type classes (`text-label-md`, `text-body-sm`) as text colors and drops one when they meet a color like `text-foreground`. Register them as font sizes in `lib/utils.ts`:
+```ts
+import { clsx, type ClassValue } from "clsx";
+import { extendTailwindMerge } from "tailwind-merge";
+
+const twMerge = extendTailwindMerge({
+  extend: {
+    classGroups: {
+      "font-size": [{
+        text: [
+          "display-lg", "display-md", "display-sm",
+          "heading-xl", "heading-lg", "heading-md", "heading-sm", "heading-xs",
+          "title-lg", "title-md", "title-sm",
+          "body-lg", "body-md", "body-sm", "body-xs",
+          "label-lg", "label-md", "label-sm",
+          "caption", "overline", "code",
+        ],
+      }],
+    },
+  },
+});
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+```
+
 ### Plain CSS
 ```css
 @import "./tokens.css";

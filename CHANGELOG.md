@@ -2,6 +2,11 @@
 
 Notable changes to SalkarsaUI are listed here. The format follows [Keep a Changelog](https://keepachangelog.com) and versions follow [SemVer](https://semver.org).
 
+## [1.2.1] - 2026-11-16
+### Fixed
+- The `.text-*` classes never used Inter or Roboto Mono. The primitive and semantic font-family variables had the same CSS name, so `--font-family-sans` ended up pointing at itself and became invalid. The primitives are now `font-family/inter` and `font-family/roboto-mono` (`--font-family-inter`, `--font-family-roboto-mono`). The semantic names `--font-family-sans` and `--font-family-mono` are unchanged.
+- DESIGN.md section 1 now shows how to set up `cn()` so `tailwind-merge` stops dropping the `.text-*` type classes.
+
 ## [1.2.0] - 2026-11-16
 ### Added
 - `SKILL.md`, which turns the repo into an Agent Skill. Install it once with `git clone` into `~/.claude/skills/salkarsaui` (or `~/.agents/skills/salkarsaui`) and update it with `git pull`.
