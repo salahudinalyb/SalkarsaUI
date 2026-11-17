@@ -1,6 +1,6 @@
 # SalkarsaUI
 
-SalkarsaUI is a mobile-first design system for the web. It comes with a Figma library, design tokens, a ready-made theme for shadcn/ui, and written guidelines you can give to your team or to an AI coding assistant.
+SalkarsaUI is a mobile-first design system for the web. It comes with a Figma file, design tokens, a ready-made theme for shadcn/ui, and written guidelines you can give to your team or to an AI coding assistant.
 
 The goal is simple: whether a person or an agent (Claude Code, Codex, Cursor, Copilot, v0, Lovable, Bolt) builds the screen, it should come out on brand and responsive without guesswork.
 
@@ -10,8 +10,9 @@ What you get:
 - A drop-in theme for shadcn/ui and Tailwind CSS v4
 - 51 components, each mapped to a shadcn/ui component, and 959 icons (Regular and Filled)
 - 573 tokens, from raw primitives up to semantic names, in light and dark
-- Hover, focus, pressed and disabled states on every component, plus a doc page for each one in Figma
+- Hover, focus, pressed and disabled states on every interactive component, plus a doc page in Figma for each of the 51 components
 - A short note on every token and component explaining when to use it
+- Installs as an Agent Skill, so Claude Code, Codex and other agents follow the system in every project
 
 ## Repo contents
 
@@ -108,7 +109,7 @@ You can also point your agent straight at the file: *"Read https://raw.githubuse
 
 ## Figma
 
-Figma library link: coming soon.
+Figma Community file: coming soon. Duplicate it to your drafts to start using it.
 
 Pages: `0. SalkarsaUI Docs` (foundations plus a doc page for each component), `1. Foundations`, `2. Components`, `Icons`, `Illustrations`.
 
